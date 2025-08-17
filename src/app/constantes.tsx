@@ -135,7 +135,7 @@ export const proyectos = [
     urlGitHub: "https://github.com/Malvavixco/libreria_front.git",
     urlImg: "/assets/libreria_app.png",
     tecnoligis: ["Flutter"],
-    url: "malvavixco.dev",
-    estado: "Deployed",
+    url: "https://malvavixco.dev",
+    estado: "Contributor",
   },
 ];

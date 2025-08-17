@@ -86,7 +86,7 @@ export default function Home() {
               <div
                 className={`${
                   active === "contact" ? "visible" : "invisible"
-                } absolute right-20 top-2 h-2 w-2 rounded-full bg-[#A9FF5B]`}
+                } absolute right-20 h-2 w-2 rounded-full bg-[#A9FF5B]`}
               ></div>
               <span>Contact</span>
             </a>
@@ -150,8 +150,9 @@ export default function Home() {
               className="border-1 w-full md:w-3/5 rounded-md border-[#9f80b9] p-3 cursor-pointer transition-all duration-700 ease-in"
               onClick={() => {
                 setAcordeones({
-                  ...acordeones,
                   1: !acordeones[1],
+                  2: false,
+                  3: false,
                 });
               }}
             >
@@ -167,27 +168,64 @@ export default function Home() {
                 <ul>
                   <li>Single Page Application (SPAs)</li>
                   <li>Multiple Page Application (MPAs)</li>
-                  <li>Cualquier cosa</li>
+                  <li>Landing Pages</li>
                 </ul>
               </div>
             </div>
-            <div className="border-1 w-full md:w-3/5 rounded-md border-[#9f80b9] p-3">
+            <div
+              className="border-1 w-full md:w-3/5 rounded-md border-[#9f80b9] p-3 cursor-pointer transition-all duration-700 ease-in"
+              onClick={() => {
+                setAcordeones({
+                  1: false,
+                  2: !acordeones[2],
+                  3: false,
+                });
+              }}
+            >
               <span className="flex">
                 <Server className="mr-3" /> API Development
               </span>
+              <div
+                className={`
+      overflow-hidden transition-all duration-700 ease-in
+      ${acordeones[2] ? "max-h-40 opacity-100 p-3" : "max-h-0 opacity-0"}
+    `}
+              >
+                <ul>
+                  <li>REST API</li>
+                </ul>
+              </div>
             </div>
-            <div className="border-1 w-full md:w-3/5 rounded-md border-[#9f80b9] p-3">
+            <div
+              className="border-1 w-full md:w-3/5 rounded-md border-[#9f80b9] p-3 cursor-pointer transition-all duration-700 ease-in"
+              onClick={() => {
+                setAcordeones({
+                  1: false,
+                  2: false,
+                  3: !acordeones[3],
+                });
+              }}
+            >
               <span className="flex">
                 <Smartphone className="mr-3" />
                 Mobile Development
               </span>
+              <div
+                className={`
+      overflow-hidden transition-all duration-700 ease-in
+      ${acordeones[3] ? "max-h-40 opacity-100 p-3" : "max-h-0 opacity-0"}
+    `}
+              >
+                <ul>
+                  <li>React Native mobile apps</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-
-        <section className="w-full" id="projects">
+        <section className="w-full border-b-1 border-[#9f80b9]" id="projects">
           <div className="max-w-5xl mx-auto space-y-8 pb-14 overflow-hidden">
-            <span className="my-10">My work</span>
+            <span className="my-10 text-[#fe10f1]">My work</span>
             <h1 className="text-5xl font-bold">Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {proyectos.map((proyecto, index) => (
@@ -195,7 +233,7 @@ export default function Home() {
                   key={index}
                   className="group w-fit overflow-hidden rounded-md"
                 >
-                  <div className="group relative w-[400px] overflow-hidden">
+                  <div className="group relative w-[400px] overflow-hidden rounded-md hover:border-[#9f80b9]">
                     <Link href={proyecto.url} target="blank">
                       <Image
                         src={proyecto.urlImg}
@@ -217,7 +255,7 @@ export default function Home() {
                           {proyecto.tecnoligis.map((tecnologia, index) => (
                             <span
                               key={index}
-                              className="text-white rounded-full border-2 p-2 bg-[#4624a4]/50 border-[#9f80b9]"
+                              className="text-white rounded-full border-2 py-1 px-3 bg-[#a80099]/50 border-[#fe10f1]"
                             >
                               {tecnologia}
                             </span>
@@ -248,6 +286,53 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+        <section className="w-full " id="contact">
+          <div className="max-w-5xl mx-auto space-y-8 pb-14 overflow-hidden">
+            <span className="my-10 text-[#fe10f1]">
+              Let&apos;s start creating
+            </span>
+            <h1 className="text-5xl font-bold">Contact</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <form action="" className="flex flex-col p-1 space-y-6">
+                <div className="flex flex-col">
+                  <label className="mb-2">Name</label>
+                  <input
+                    className="p-3 border-1 border-[#9f80b9] rounded-lg text-gray-300"
+                    type="text"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label className="mb-2">Email</label>
+                  <input
+                    className="p-3 border-1 border-[#9f80b9] rounded-lg text-gray-300"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <label className="mb-2">Message</label>
+                  <textarea
+                    className="p-3 border-1 border-[#9f80b9] rounded-lg text-gray-300 min-h-36"
+                    name=""
+                    id=""
+                    placeholder="Tell me about your project"
+                  ></textarea>
+                </div>
+                <button className="bg-[#ce00be] text-white text-xl py-3 rounded-md cursor-pointer hover:bg-[#a80099] transition ease-in">
+                  Send Message
+                </button>
+              </form>
+              <div className="">
+                <h3 className="text-3xl mb-3 text-[#fe10f1]">Work with me</h3>
+                <span>
+                  Available for freelance projects, collaborations, or just to
+                  ask
+                </span>
+              </div>
             </div>
           </div>
         </section>

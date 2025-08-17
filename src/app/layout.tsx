@@ -8,9 +8,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Malvavixco",
+  title: "Malvavixco - Software Engineer",
   description: "Malvavixco portafolio web",
-  keywords: ["Software developer", "freelancer", "react", "nest", "web development"]
+  keywords: [
+    "malvavixco",
+    "portafolio",
+    "Software developer",
+    "freelancer",
+    "react",
+    "nest",
+    "web development",
+  ],
 };
 
 export default function RootLayout({
