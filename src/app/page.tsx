@@ -7,14 +7,13 @@ import {
   AppWindow,
   ArrowUpRight,
   Code,
-  Database,
   Server,
   Smartphone,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function useActiveSection(sectionIds: string[]) {
+function useActiveSection(sectionIds: string[]) {
   const [active, setActive] = useState<string>("");
 
   useEffect(() => {
