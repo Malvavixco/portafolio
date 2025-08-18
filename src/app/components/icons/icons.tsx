@@ -556,3 +556,111 @@ export const PostgreSQL = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
+
+export const Nextjsi = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 180 180"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <mask
+      id="nextjs_icon_dark__mask0_408_139"
+      style={{
+        maskType: "alpha",
+      }}
+      maskUnits="userSpaceOnUse"
+      x={0}
+      y={0}
+      width={180}
+      height={180}
+    >
+      <circle cx={90} cy={90} r={90} fill="black" />
+    </mask>
+    <g mask="url(#nextjs_icon_dark__mask0_408_139)">
+      <circle
+        cx={90}
+        cy={90}
+        r={87}
+        fill="black"
+        stroke="white"
+        strokeWidth={6}
+      />
+      <path
+        d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z"
+        fill="url(#nextjs_icon_dark__paint0_linear_408_139)"
+      />
+      <rect
+        x={115}
+        y={54}
+        width={12}
+        height={72}
+        fill="url(#nextjs_icon_dark__paint1_linear_408_139)"
+      />
+    </g>
+    <defs>
+      <linearGradient
+        id="nextjs_icon_dark__paint0_linear_408_139"
+        x1={109}
+        y1={116.5}
+        x2={144.5}
+        y2={160.5}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset={1} stopColor="white" stopOpacity={0} />
+      </linearGradient>
+      <linearGradient
+        id="nextjs_icon_dark__paint1_linear_408_139"
+        x1={121}
+        y1={54}
+        x2={120.799}
+        y2={106.875}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="white" />
+        <stop offset={1} stopColor="white" stopOpacity={0} />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+
+export const TailwindCSSIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 54 33"
+    width="1em"
+    height="1em"
+    {...props}
+  >
+    <g clipPath="url(#tailwindcss__a)">
+      <path
+        fill="#38bdf8"
+        fillRule="evenodd"
+        d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+        clipRule="evenodd"
+      />
+    </g>
+    <defs>
+      <clipPath id="tailwindcss__a">
+        <path fill="#fff" d="M0 0h54v32.4H0z" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const Vercel = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 256 222"
+    width="1em"
+    height="1em"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid"
+    {...props}
+  >
+    <path fill="#fff" d="m128 0 128 221.705H0z" />
+  </svg>
+);

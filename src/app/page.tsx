@@ -1,7 +1,14 @@
 "use client";
 import Image from "next/image";
 import "./globals.css";
-import { LinkedIn, GitHub, Gmail } from "./components/icons/icons";
+import {
+  LinkedIn,
+  GitHub,
+  Gmail,
+  Nextjsi,
+  TailwindCSSIcon,
+  Vercel,
+} from "./components/icons/icons";
 import { tecnologias, proyectos } from "./constantes";
 import {
   AppWindow,
@@ -227,13 +234,13 @@ export default function Home() {
           <div className="max-w-5xl mx-auto space-y-8 pb-14 overflow-hidden">
             <span className="my-10 text-[#fe10f1]">My work</span>
             <h1 className="text-5xl font-bold">Projects</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {proyectos.map((proyecto, index) => (
                 <div
                   key={index}
                   className="group w-fit overflow-hidden rounded-md"
                 >
-                  <div className="group relative w-[400px] overflow-hidden rounded-md hover:border-[#9f80b9]">
+                  <div className="group relative md:w-[400px] overflow-hidden rounded-md hover:border-[#9f80b9]">
                     <Link href={proyecto.url} target="blank">
                       <Image
                         src={proyecto.urlImg}
@@ -289,7 +296,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full " id="contact">
+        <section className="w-full border-b-1 border-[#9f80b9]" id="contact">
           <div className="max-w-5xl mx-auto space-y-8 pb-14 overflow-hidden">
             <span className="my-10 text-[#fe10f1]">
               Let&apos;s start creating
@@ -337,52 +344,49 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="w-full">
+        <div className="max-w-5xl mx-auto space-y-8 pb-14 overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pt-10 border-b-1 border-[#9f80b9]">
+          <div className="flex gap-3 justify-center md:justify-start">
+            <a
+              href="https://github.com/Malvavixco"
+              className="text-white text-2xl w-13 h-13 p-3 border-1 rounded-lg border-[#9f80b9]"
+              target="blank"
+            >
+              <GitHub />
+            </a>
+            <a
+              href="https://linkedin.com/in/eduardo-valverde-santillan"
+              className="text-white text-2xl w-13 h-13 p-3 border-1 rounded-lg border-[#9f80b9]"
+              target="blank"
+            >
+              <LinkedIn />
+            </a>
+            <span className="text-white text-2xl w-13 h-13 p-3 border-1 rounded-lg border-[#9f80b9]">
+              <Gmail />
+            </span>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-center justify-center">
+              <span className="mr-3">Built with </span>
+              <Nextjsi className="h-5 w-5 mr-3 opacity-50" />
+              <span>NextJS</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <span className="mr-3">Styled with </span>
+              <TailwindCSSIcon className="h-5 w-5 mr-3" />
+              <span>Tailwind</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <span className="mr-3">Deployed on</span>
+              <Vercel className="h-5 w-5 mr-3" />
+              <span>Vercel</span>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <div className="max-w-5xl mx-auto space-y-8 pb-14 overflow-hidden pt-9 flex justify-center">
+          <span className="text-center">Copyright © 2025 Malvavixco. All rights reserved.</span>
+        </div>
       </footer>
     </>
   );
