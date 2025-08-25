@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.className} antialiased sm:px-28 lg:px-20 px-9`}
       >
-        <div className="fixed inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+        <div className="fixed inset-0 -z-10 h-dvh w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
         {children}
         <SpeedInsights />
       </body>
